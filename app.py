@@ -3,8 +3,18 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# Load the trained ML model
 MODEL_FILE = "salary_prediction_model.pkl"
+
+try:
+    with open(MODEL_FILE, "rb") as file:
+        model = pickle.load(file)
+
+    st.success("Model loaded successfully!")
+
+except Exception as e:
+    st.error(f"Model loading error: {e}")
+
+
 
 try:
     with open(MODEL_FILE, "rb") as file:
