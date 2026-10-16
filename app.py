@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Load the trained ML model
-MODEL_FILE = "Salary_prediction_model(1).pkl"
+MODEL_FILE = "Salary_prediction_model .pkl"
 
 try:
     with open(MODEL_FILE, "rb") as file:
