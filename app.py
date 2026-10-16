@@ -50,7 +50,7 @@ education = st.selectbox(
 # Predict salary
 if st.button("Predict Salary"):
     try:
-        input_data = np.array([[experience,age]])
+        input_data = np.array([[experience,education]])
         prediction = model.predict(input_data)
 
         st.success(
