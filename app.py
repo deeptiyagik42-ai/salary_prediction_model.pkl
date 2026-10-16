@@ -33,13 +33,13 @@ st.write("Predict salary using Machine Learning")
 # User input
 experience = st.number_input(
     "Enter Years of Experience",
-    min_value=0.0,
-    max_value=60.0,
-    value=1.0,
-    step=0.5
+    [High School,
+    Associate,
+    Bachelor,
+    Master]
 )
 
-age = st.number_input(
+education = st.selectbox(
     "Enter Your age",
     min_value=0.0,
     max_value=60.0,
