@@ -39,10 +39,18 @@ experience = st.number_input(
     step=0.5
 )
 
+age = st.number_input(
+    "Enter Your age",
+    min_value=0.0,
+    max_value=60.0,
+    value=1.0,
+    step=0.5
+)
+
 # Predict salary
 if st.button("Predict Salary"):
     try:
-        input_data = np.array([[experience]])
+        input_data = np.array([[experience,age]])
         prediction = model.predict(input_data)
 
         st.success(
